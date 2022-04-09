@@ -1,38 +1,142 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Raleway:wght@100;300;700&display=swap');
+
+.main-container {
+  width: 60%;
+  margin: auto;
+  font-family: 'Raleway';
+}
+
+.header {
+  font-size: 1.5em;
+  font-family: 'Paytone One';
+  font-weight: 700;
+  background: linear-gradient(342deg, rgba(38,96,107,1) 0%, rgba(26,121,148,1) 42%, rgba(200,244,255,1) 100%);
   text-align: center;
+  color: white;
+  padding: 50px;
+  border-radius: 4px;
+  letter-spacing: .07em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input, button {
+  border: none;
+  outline: none;
+  font-family: 'Raleway';
+
+}
+input {
+  background: rgb(218, 231, 238);
+  color: rgb(28, 68, 87);
+  border-radius: 15px 0 0 15px;
+  font-weight: 300;
+}
+input:focus {
+  background: rgb(152, 208, 230);
+  color: rgb(28, 68, 87);
+  border-radius: 15px 0 0 15px;
+  font-weight: 300;
+}
+button {
+  font-weight: 700;
+  border-radius: 0 15px 15px 0;
+  background: rgb(17, 73, 99);
+  color: white;
+  transition: all .3s ease-in;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+  cursor: pointer;
+  background: rgb(45, 93, 116);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  transition: all 1s ease-in;
+}
+
+form input{
+  width: 75%;
+}
+form button {
+  width: 15%;
+}
+
+.search-container-lg {
+  margin: 120px auto;
+}
+.search-container-sm {
+  margin: 15px auto;
+  position: sticky;
+  top: 5px;
+}
+
+.search-container-lg input, 
+.search-container-lg button {
+  padding: 25px;
+  font-size: 1.4em;
+}
+
+.search-container-sm input, 
+.search-container-sm button {
+  padding: 10px;
+  font-size: 1em;
+}
+.image-grid {
+  border-radius: 5px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(233, 233, 233);
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.image-box {
+  border-radius: 5px;
+  min-height: 150px;
+  max-height: 150px;
+  max-width: 150px;
+  min-width: 150px;
+  padding: 15px;
+  margin: 5px;
+  background: rgb(238, 238, 238);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: all .3s ease-in;
 }
 
-.App-link {
-  color: #61dafb;
+.image-box:hover {
+  background: rgb(216, 216, 216);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: all .3s ease-in
+}
+
+.image-box a {
+  color: #2299bb;
+}
+.image-box svg {
+  height: 20px;
+  width: 20px;
+}
+
+.image-box .img {
+  max-height: 80%;
+} 
+.image-box .dl {
+  height: 15%;
+}
+
+.placeholder {
+  font-size: 1.8em;
+  padding: 2em;
+  text-align: center;
 }
